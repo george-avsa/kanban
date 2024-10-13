@@ -1,12 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 import { ETexts } from "../../../assets/fonts/ETexts";
-
-export enum EButtonColors {
-  VIOLET,
-  LIGHT,
-  RED,
-}
+import { EButtonColors, EButtonSizes } from "./types";
 
 const ButtonColorClasses: Record<EButtonColors, string> = {
   [EButtonColors.VIOLET]: "bg-violet-300 hover:bg-violet-200 text-white-100",
@@ -14,11 +9,6 @@ const ButtonColorClasses: Record<EButtonColors, string> = {
     "bg-violet-100 hover:bg-violet-200 dark:bg-white-200 text-violet-300",
   [EButtonColors.RED]: "bg-red-200 hover:bg-red-100 text-white-100",
 };
-
-export enum EButtonSizes {
-  DEFAULT,
-  LARGE,
-}
 
 const ButtonSizeClasses: Record<EButtonSizes, string> = {
   [EButtonSizes.DEFAULT]: `h-10 ${ETexts.TEXT_BOLD}`,
