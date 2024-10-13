@@ -1,17 +1,21 @@
 import clsx from "clsx";
+import { ETexts } from "./assets/fonts/ETexts";
+import Button, { EButtonColors } from "./shared/ui/Button/Button";
+import { useLayoutEffect } from "react";
 
 function App() {
-  const constant = true;
+  useLayoutEffect(() => {
+    const html = document.querySelector("html");
+    html?.classList.add("dark");
+  }, []);
 
   return (
-    <h1
-      className={clsx(
-        "text-3xl font-bold text-blue-500 underline ",
-        constant && "flex"
-      )}
-    >
-      Hello world!
-    </h1>
+    <div>
+      <h1 className={clsx(ETexts.TEXT)}>Hello man!!</h1>
+      <Button className="w-16" bgColor={EButtonColors.LIGHT}>
+        123
+      </Button>
+    </div>
   );
 }
 
