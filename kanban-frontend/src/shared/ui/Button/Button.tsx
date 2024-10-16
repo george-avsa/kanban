@@ -19,7 +19,8 @@ interface IButtonProps {
   className?: string;
   children?: JSX.Element | string;
   bgColor?: EButtonColors;
-  size: EButtonSizes;
+  size?: EButtonSizes;
+  isDisabled?: boolean;
 }
 
 const Button: FC<IButtonProps> = ({
@@ -27,6 +28,7 @@ const Button: FC<IButtonProps> = ({
   children,
   bgColor = EButtonColors.VIOLET,
   size = EButtonSizes.DEFAULT,
+  isDisabled,
 }) => {
   return (
     <button
@@ -34,8 +36,9 @@ const Button: FC<IButtonProps> = ({
         className,
         ButtonColorClasses[bgColor],
         ButtonSizeClasses[size],
-        "rounded-full transition-all"
+        "rounded-full transition-all disabled:opacity-50"
       )}
+      disabled={isDisabled}
     >
       {children}
     </button>

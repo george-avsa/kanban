@@ -44,6 +44,10 @@ export default {
         lg: "175%",
       }
     },
+    screens: {
+      'md': '768px',
+      '2xl': '1440px',
+    }
   },
   plugins: [],
 }

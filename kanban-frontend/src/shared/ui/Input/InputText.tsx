@@ -52,7 +52,7 @@ const InputText: FC<IInputTextProps> = ({
     <div className={clsx("relative max-w-[350px]", ETexts.TEXT)}>
       <input
         className={clsx(
-          "h-10 w-full rounded-md border px-4 text-black-100 transition-all placeholder:opacity-25 focus:outline focus:outline-1",
+          "h-10 w-full rounded-md border px-4 text-black-100 transition-all placeholder:opacity-25 focus:outline focus:outline-1 dark:border-white-100/25 dark:bg-gray-400 dark:text-white-100",
           error
             ? "border-red-200 pr-36 focus:outline-red-200"
             : "border-gray-400/25 focus:outline-violet-300"
